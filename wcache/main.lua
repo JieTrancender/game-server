@@ -1,11 +1,17 @@
 local skynet  = require "skynet"
-local cluster = requrie "skynet.cluster"
+local cluster = require "skynet.cluster"
 
 skynet.start(function()
+    local nodeList = {
+        ["wcached"] = {
+            [1] = {["ips"] = {"127.0.0.1:2520", "127.0.0.1:2521"}},
+        }
+    }
+    
     local clusterName = {
         __nowaiting = true,
-        wcached_1 = {"127.0.0.1:2520","127.0.0.1:2521"},
-        wgamed_1 = "127.0.0.1:2521",
+        -- wcached_1 = {"127.0.0.1:2520","127.0.0.1:2521"},
+        -- wgamed_1 = "127.0.0.1:2521",
     }
 
     local nodeName = "wcached_1"

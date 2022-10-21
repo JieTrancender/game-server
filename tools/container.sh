@@ -6,4 +6,6 @@ docker run \
     -v $PWD/lualib:/game-server/lualib \
     -v $PWD/service:/game-server/service \
     -v $PWD/tools:/game-server/tools \
+    -v $PWD/conf:/game-server/conf \
+    -v $PWD/wcache:/game-server/wcache \
     game-server /bin/sh
