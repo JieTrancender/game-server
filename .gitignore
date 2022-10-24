@@ -39,3 +39,8 @@ luac.out
 *.x86_64
 *.hex
 
+# etcd
+data
+data/etcd/infra1.etcd
+data/etcd/infra2.etcd
+data/etcd/infra3.etcd
