@@ -17,11 +17,9 @@ skynet.start(function()
     local wcachedConf1 = {ips = "127.0.0.1:11001,127.0.0.1:11002,127.0.0.1:11003", nodeName = "wcached", threadId = 1, serviceName = "wcached"}
     local wcachedConf2 = {ips = "127.0.0.1:11101,127.0.0.1:11102,127.0.0.1:11103", nodeName = "wcached", threadId = 2, serviceName = "wcached"}
     local res, err = skynet.call(etcdd, "lua", "set", etcd_base_path.."node/wcached/1", wcachedConf1)
-    print(res, err)
     local res, err = skynet.call(etcdd, "lua", "set", etcd_base_path.."node/wcached/2", wcachedConf2)
-    print(res, err)
     local res, err = skynet.call(etcdd, "lua", "get", etcd_base_path.."node/wcached/2")
-    print("~~~~~~~last", util.table_dump_line(res), err)
+    print("res = ", util.table_dump_line(res), err)
     
     skynet.error("test etcd successd.")
 end)

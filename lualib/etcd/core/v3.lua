@@ -84,7 +84,6 @@ local function _request_uri(self, host, method, uri, opts, timeout, ignore_auth)
         if not ignore_auth then
             -- authentication request not need auth request
             local _, err = refresh_jwt_token(self, timeout)
-            print("~~~~~~~~refreshw", err, self.jwt_token)
             if err then
                 return nil, err
             end
@@ -95,7 +94,6 @@ local function _request_uri(self, host, method, uri, opts, timeout, ignore_auth)
         end
     end
 
-    print("request", method, host, uri, utils.table_dump_line(headers), utils.table_dump_line(body))
     local status, body = httpc.request(method, host, uri, recvheader, headers, body)
     if status >= 500 then
         return nil, "invalid response code: " .. status
@@ -193,7 +191,6 @@ function _M.new(opts)
     --     return nil, err
     -- end
 
-    print("~~~~~~~~~~user pass", user, password)
     return setmetatable({
         last_auth_time = skynet.now(),  -- save last Authentication time
         last_refresh_jwt_err = nil,
