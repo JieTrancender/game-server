@@ -19,7 +19,7 @@ skynet.start(function()
     local res, err = skynet.call(etcdd, "lua", "set", etcd_base_path.."node/wcached/1", wcachedConf1)
     local res, err = skynet.call(etcdd, "lua", "set", etcd_base_path.."node/wcached/2", wcachedConf2)
     local res, err = skynet.call(etcdd, "lua", "get", etcd_base_path.."node/wcached/2")
-    print("res = ", util.table_dump_line(res), err)
+    print("config is ", util.table_dump_line(res.body.kvs[1].value))
     
     skynet.error("test etcd successd.")
 end)
