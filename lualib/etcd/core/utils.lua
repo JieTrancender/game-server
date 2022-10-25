@@ -89,7 +89,7 @@ local log_info
 local log_error
 
 -- todo: log level
-local log_level = "INFO"
+local log_level = "ERROR"
 do
     local function logImp(...)
         local t = {...}
