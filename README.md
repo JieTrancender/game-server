@@ -20,6 +20,7 @@ sh tools/container.sh
 **本地开发**模式进入容器，执行`./skynet/skynet examples/config.testprofile.lua`测试。
 
 浏览器访问`http://127.0.0.1:11001/admin#/dashboard`输入节点地址`127.0.0.1:11002`提交。点击左侧**profiler**栏，再点击开启开始测试，完毕后查看`snlua service_cell cost_cpu`服务的CPU和MEM火焰图。
+![火焰图](https://storage.keyboard-man.com/site-web/images/skynet-profile-dashboard.png)
 
 #### TODO
 架构、优化等更多内容逐步到来，欢迎关注该项目。
