@@ -8,4 +8,6 @@ docker run \
     -v $PWD/tools:/game-server/tools \
     -v $PWD/3rd:/game-server/3rd \
     -v $PWD/luaclib:/game-server/luaclib \
+    -v $PWD/admin:/game-server/admin \
+    -p 11001-11009:11001-11009 \
     game-server /bin/sh
