@@ -4,9 +4,6 @@
 [submodule "3rd/lua-cjson"]
 	path = 3rd/lua-cjson
 	url = https://github.com/mpx/lua-cjson.git
-[submodule "3rd/luaprofile"]
-	path = 3rd/luaprofile
-	url = git@github.com:JieTrancender/luaprofile.git
 [submodule "3rd/skynet"]
 	path = 3rd/skynet
 	url = git@github.com:JieTrancender/skynet.git
