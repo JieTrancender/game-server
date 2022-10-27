@@ -25,3 +25,6 @@ sh tools/container.sh
 #### TODO
 架构、优化等更多内容逐步到来，欢迎关注该项目。
 与此相关博客`https://www.keyboard-man.com/categories/skynet/`。
+
+#### 博客
+这里只是具体的代码实现或者实例，具体思想总结欢迎查看博客[https://www.keyboard-man.com/](https://www.keyboard-man.com/)
